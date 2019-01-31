@@ -24,7 +24,7 @@ class Contact extends Component {
         }   
 
         this.handleSubmit = this.handleSubmit.bind(this);
-        this.handleInputChange = this.handleInputChange .bind(this);
+        this.handleInputChange = this.handleInputChange.bind(this);
         this.handleBlur = this.handleBlur.bind(this);
     }
 
@@ -135,8 +135,8 @@ class Contact extends Component {
                                     value={this.state.firstname}
                                     onChange={this.handleInputChange}
                                     onBlur={this.handleBlur('firstname')}
-                                    valid={errors.firstname == ''}
-                                    invalid={errors.firstname !=- ''}
+                                    valid={errors.firstname === ''}
+                                    invalid={errors.firstname !== ''}
                                      />
                                     <FormFeedback>
                                         {errors.firstname}
@@ -151,8 +151,8 @@ class Contact extends Component {
                                     value={this.state.lastname}
                                      onChange={this.handleInputChange}
                                      onBlur={this.handleBlur('lastname')}
-                                    valid={errors.lastname == ''}
-                                    invalid={errors.lastname !=- ''}
+                                    valid={errors.lastname === ''}
+                                    invalid={errors.lastname !== ''}
                                      />
                                      <FormFeedback>
                                         {errors.lastname}
@@ -167,8 +167,8 @@ class Contact extends Component {
                                     value={this.state.telnum}
                                      onChange={this.handleInputChange}
                                      onBlur={this.handleBlur('telnum')}
-                                      valid={errors.telnum == ''}
-                                    invalid={errors.telnum !=- ''}
+                                      valid={errors.telnum === ''}
+                                    invalid={errors.telnum !== ''}
                                      />
                                      <FormFeedback>
                                         {errors.telnum}
@@ -183,8 +183,8 @@ class Contact extends Component {
                                     value={this.state.email}
                                      onChange={this.handleInputChange}
                                      onBlur={this.handleBlur('email')}
-                                      valid={errors.email == ''}
-                                    invalid={errors.email !=- ''}
+                                      valid={errors.email === ''}
+                                    invalid={errors.email !== ''}
                                      />
                                      <FormFeedback>
                                         {errors.email}
