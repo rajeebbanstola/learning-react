@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Navbar, NavbarBrand } from 'reactstrap';
 import Menu from './MenuComponent';
 import { DISHES } from '../shared/dishes';
-import DishdetailComponent from './DishdetailComponent.js';
+import DishDetail from './DishdetailComponent.js';
 
 class Main extends Component {
 
@@ -30,7 +30,7 @@ class Main extends Component {
         </div>
        </Navbar>
        <Menu dishes={this.state.dishes} onClick={(dishId) => this.onDishSelect(dishId)} />
-       <DishdetailComponent dish={this.state.dishes.filter((dish) => dish.id === this.state.selectedDish)[0] } />
+       <DishDetail dish={this.state.dishes.filter((dish) => dish.id === this.state.selectedDish)[0] } />
       </div>
     );
   }
